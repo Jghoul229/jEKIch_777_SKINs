@@ -1,33 +1,38 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>jekich_777 Skins</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jEKIch_777_SKINs</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>v</h1>
-        <p>Привет! Это страница скинов, которые я использую. Напоминаю, что я не создавал ни одного из этих скинов, те, что названы моим именем, были сделаны из других, и лишь несколько элементов были созданы мной. Я постараюсь поддерживать список в актуальном состоянии. Спасибо, что заглянули!</p>
-    </header>
-    <main>
-        <section class="skins-list">
-            <article class="skin-item">
-                <img src="skin1.png" alt="Aristia (Edit)">
-                <h2>Aristia (Edit)</h2>
-                <a href="#">Open Folder</a>
-            </article>
-            <article class="skin-item">
-                <img src="skin2.png" alt="azr8">
-                <h2>azr8</h2>
-                <a href="#">Open Folder</a>
-            </article>
-            <!-- Добавьте больше скинов здесь -->
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 nikzz's Skins</p>
-    </footer>
+  <header>
+    <h1>jEKIch_777_SKINs</h1>
+    <input type="text" id="search" placeholder="Поиск по названию..." class="search-bar">
+  </header>
+  
+  <main>
+    <!-- Блок с видео превью скина -->
+    <div class="preview-container">
+      <video id="preview-video" class="preview-video" width="300" controls>
+        <source src="preview.mp4" type="video/mp4">
+        Ваш браузер не поддерживает видео.
+      </video>
+      <button class="play-btn" onclick="playPreview()">Играть превью</button>
+    </div>
+
+    <!-- Кнопки для скачивания -->
+    <div class="download-buttons">
+      <button class="download-btn" onclick="downloadSkin()">Скачать скин</button>
+      <button class="download-btn" onclick="downloadMap()">Скачать карту</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 jEKIch_777_SKINs</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
