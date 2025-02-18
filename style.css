@@ -1,104 +1,113 @@
-/* Общие стили для всей страницы */
+/* Общие стили */
 html, body {
-    height: 100%; /* Занимаем всю высоту экрана */
-    margin: 0; /* Убираем отступы по умолчанию */
-    padding: 0; /* Убираем внутренние отступы по умолчанию */
-    font-family: 'Arial', sans-serif; /* Шрифт по умолчанию */
-    background-color: #f4f4f4; /* Цвет фона */
-    color: #333; /* Цвет текста */
-    line-height: 1.6; /* Межстрочный интервал */
-}
-
-/* Основной контейнер страницы */
-#page-container {
-    display: flex; /* Используем flexbox для управления layout */
-    flex-direction: column; /* Элементы располагаются вертикально */
-    min-height: 100vh; /* Минимальная высота — вся высота экрана */
-}
-
-/* Контейнер для основного контента */
-#content-wrap {
-    flex: 1; /* Растягиваем контент, чтобы он занимал всё доступное пространство */
-    padding: 20px; /* Внутренние отступы */
-}
-
-/* Стили для шапки */
-header {
-    background-color: #222; /* Темный фон */
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a; /* Темный фон вместо серого */
     color: #fff; /* Белый текст */
-    padding: 20px 0; /* Внутренние отступы */
-    text-align: center; /* Выравнивание текста по центру */
+    line-height: 1.6;
+}
+
+#page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#content-wrap {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Шапка */
+header {
+    background-color: rgba(0, 0, 0, 0.8); /* Полупрозрачный черный */
+    padding: 30px 0;
+    text-align: center;
+    backdrop-filter: blur(10px); /* Эффект размытия */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Граница */
 }
 
 header h1 {
-    margin: 0; /* Убираем отступы у заголовка */
-    font-size: 2.5em; /* Размер шрифта */
+    margin: 0;
+    font-size: 3em; /* Крупнее */
+    letter-spacing: 2px; /* Расстояние между буквами */
+    color: #fff;
 }
 
 header p {
-    margin: 5px 0 0; /* Отступы для параграфа */
-    font-size: 1.2em; /* Размер шрифта */
+    margin: 10px 0 0;
+    font-size: 1.2em;
+    color: rgba(255, 255, 255, 0.8);
 }
 
-/* Стили для карточек скинов */
+/* Карточки скинов */
 .skins {
-    display: flex; /* Используем flexbox для расположения карточек */
-    flex-wrap: wrap; /* Переносим карточки на новую строку, если не хватает места */
-    gap: 20px; /* Расстояние между карточками */
-    justify-content: center; /* Выравниваем карточки по центру */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    max-width: 1200px; /* Ограничиваем ширину контента */
+    margin: 0 auto; /* Центрируем */
 }
 
 .skin-card {
-    background-color: #fff; /* Белый фон */
-    border-radius: 8px; /* Закругленные углы */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень */
-    overflow: hidden; /* Скрываем всё, что выходит за пределы карточки */
-    width: 300px; /* Ширина карточки */
-    text-align: center; /* Выравнивание текста по центру */
-    transition: transform 0.3s ease; /* Плавная анимация при наведении */
+    background-color: rgba(0, 0, 0, 0.4); /* Темные карточки */
+    border-radius: 12px;
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(8px); /* Размытие */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Граница */
 }
 
 .skin-card:hover {
-    transform: translateY(-10px); /* Сдвигаем карточку вверх при наведении */
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Тень при наведении */
 }
 
 .skin-card img {
-    width: 100%; /* Ширина изображения */
-    height: auto; /* Высота автоматически подстраивается */
+    width: 100%;
+    height: 200px; /* Фиксированная высота изображения */
+    object-fit: cover; /* Обрезаем изображение по размеру */
 }
 
 .skin-card h2 {
-    font-size: 1.5em; /* Размер шрифта */
-    margin: 15px 0 10px; /* Отступы */
+    font-size: 1.5em;
+    margin: 20px 0 10px;
+    color: #fff;
 }
 
 .skin-card p {
-    padding: 0 15px; /* Внутренние отступы */
-    font-size: 0.9em; /* Размер шрифта */
-    color: #666; /* Цвет текста */
+    padding: 0 20px;
+    font-size: 0.95em;
+    color: rgba(255, 255, 255, 0.7);
 }
 
-/* Стили для кнопки скачивания */
+/* Кнопка скачивания */
 .download-btn {
-    display: inline-block; /* Делаем кнопку блочным элементом */
-    margin: 15px 0; /* Отступы */
-    padding: 10px 20px; /* Внутренние отступы */
-    background-color: #222; /* Темный фон */
-    color: #fff; /* Белый текст */
-    text-decoration: none; /* Убираем подчеркивание */
-    border-radius: 5px; /* Закругленные углы */
-    transition: background-color 0.3s ease; /* Плавная анимация */
+    display: inline-block;
+    margin: 20px 0;
+    padding: 12px 25px;
+    background-color: #6c5ce7; /* Фиолетовый акцент */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
 }
 
 .download-btn:hover {
-    background-color: #444; /* Изменяем цвет фона при наведении */
+    background-color: #5b4bc4;
+    transform: scale(1.05); /* Увеличение кнопки */
 }
 
-/* Стили для футера */
+/* Футер */
 footer {
-    background-color: #222; /* Темный фон */
-    color: #fff; /* Белый текст */
-    text-align: center; /* Выравнивание текста по центру */
-    padding: 10px 0; /* Внутренние отступы */
-    margin-top: auto; /* Прижимаем футер к низу */
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px 0;
+    margin-top: auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
