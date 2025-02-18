@@ -1,90 +1,104 @@
-/* Общие стили */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
+/* Общие стили для всей страницы */
+html, body {
+    height: 100%; /* Занимаем всю высоту экрана */
+    margin: 0; /* Убираем отступы по умолчанию */
+    padding: 0; /* Убираем внутренние отступы по умолчанию */
+    font-family: 'Arial', sans-serif; /* Шрифт по умолчанию */
+    background-color: #f4f4f4; /* Цвет фона */
+    color: #333; /* Цвет текста */
+    line-height: 1.6; /* Межстрочный интервал */
 }
 
+/* Основной контейнер страницы */
+#page-container {
+    display: flex; /* Используем flexbox для управления layout */
+    flex-direction: column; /* Элементы располагаются вертикально */
+    min-height: 100vh; /* Минимальная высота — вся высота экрана */
+}
+
+/* Контейнер для основного контента */
+#content-wrap {
+    flex: 1; /* Растягиваем контент, чтобы он занимал всё доступное пространство */
+    padding: 20px; /* Внутренние отступы */
+}
+
+/* Стили для шапки */
 header {
-    background-color: #222;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
+    background-color: #222; /* Темный фон */
+    color: #fff; /* Белый текст */
+    padding: 20px 0; /* Внутренние отступы */
+    text-align: center; /* Выравнивание текста по центру */
 }
 
 header h1 {
-    margin: 0;
-    font-size: 2.5em;
+    margin: 0; /* Убираем отступы у заголовка */
+    font-size: 2.5em; /* Размер шрифта */
 }
 
 header p {
-    margin: 5px 0 0;
-    font-size: 1.2em;
+    margin: 5px 0 0; /* Отступы для параграфа */
+    font-size: 1.2em; /* Размер шрифта */
 }
 
-main {
-    padding: 20px;
-}
-
+/* Стили для карточек скинов */
 .skins {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+    display: flex; /* Используем flexbox для расположения карточек */
+    flex-wrap: wrap; /* Переносим карточки на новую строку, если не хватает места */
+    gap: 20px; /* Расстояние между карточками */
+    justify-content: center; /* Выравниваем карточки по центру */
 }
 
 .skin-card {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    width: 300px;
-    text-align: center;
-    transition: transform 0.3s ease;
+    background-color: #fff; /* Белый фон */
+    border-radius: 8px; /* Закругленные углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень */
+    overflow: hidden; /* Скрываем всё, что выходит за пределы карточки */
+    width: 300px; /* Ширина карточки */
+    text-align: center; /* Выравнивание текста по центру */
+    transition: transform 0.3s ease; /* Плавная анимация при наведении */
 }
 
 .skin-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-10px); /* Сдвигаем карточку вверх при наведении */
 }
 
 .skin-card img {
-    width: 100%;
-    height: auto;
+    width: 100%; /* Ширина изображения */
+    height: auto; /* Высота автоматически подстраивается */
 }
 
 .skin-card h2 {
-    font-size: 1.5em;
-    margin: 15px 0 10px;
+    font-size: 1.5em; /* Размер шрифта */
+    margin: 15px 0 10px; /* Отступы */
 }
 
 .skin-card p {
-    padding: 0 15px;
-    font-size: 0.9em;
-    color: #666;
+    padding: 0 15px; /* Внутренние отступы */
+    font-size: 0.9em; /* Размер шрифта */
+    color: #666; /* Цвет текста */
 }
 
+/* Стили для кнопки скачивания */
 .download-btn {
-    display: inline-block;
-    margin: 15px 0;
-    padding: 10px 20px;
-    background-color: #222;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    display: inline-block; /* Делаем кнопку блочным элементом */
+    margin: 15px 0; /* Отступы */
+    padding: 10px 20px; /* Внутренние отступы */
+    background-color: #222; /* Темный фон */
+    color: #fff; /* Белый текст */
+    text-decoration: none; /* Убираем подчеркивание */
+    border-radius: 5px; /* Закругленные углы */
+    transition: background-color 0.3s ease; /* Плавная анимация */
 }
 
 .download-btn:hover {
-    background-color: #444;
+    background-color: #444; /* Изменяем цвет фона при наведении */
 }
 
+/* Стили для футера */
 footer {
-    background-color: #222;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
+    background-color: #222; /* Темный фон */
+    color: #fff; /* Белый текст */
+    text-align: center; /* Выравнивание текста по центру */
+    padding: 10px 0; /* Внутренние отступы */
+    margin-top: auto; /* Прижимаем футер к низу */
 }
