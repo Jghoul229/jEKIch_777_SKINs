@@ -1,112 +1,90 @@
-/* Общие стили для страницы */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Общие стили */
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #1c1c1c;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  transition: background-color 0.5s ease;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
 }
 
 header {
-  width: 100%;
-  text-align: center;
-  padding: 30px 0;
-  background: linear-gradient(135deg, #007BFF, #0056b3);
-  border-radius: 15px;
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
-  margin-bottom: 40px;
+    background-color: #222;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
 }
 
-h1 {
-  font-size: 36px;
-  font-weight: 600;
-  letter-spacing: 1px;
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
 }
 
-.search-bar {
-  padding: 12px 20px;
-  width: 80%;
-  max-width: 400px;
-  border-radius: 5px;
-  border: none;
-  margin-top: 20px;
-  font-size: 18px;
-  background-color: #333;
-  color: #fff;
-  outline: none;
-  transition: background-color 0.3s ease;
+header p {
+    margin: 5px 0 0;
+    font-size: 1.2em;
 }
 
-.search-bar:focus {
-  background-color: #555;
+main {
+    padding: 20px;
 }
 
-.preview-container {
-  margin-bottom: 40px;
-  text-align: center;
+.skins {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
-.preview-video {
-  width: 80%;
-  max-width: 600px;
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+.skin-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease;
 }
 
-.play-btn {
-  margin-top: 15px;
-  background-color: #007BFF;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
+.skin-card:hover {
+    transform: translateY(-10px);
 }
 
-.play-btn:hover {
-  background-color: #0056b3;
+.skin-card img {
+    width: 100%;
+    height: auto;
 }
 
-.download-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 30px;
+.skin-card h2 {
+    font-size: 1.5em;
+    margin: 15px 0 10px;
+}
+
+.skin-card p {
+    padding: 0 15px;
+    font-size: 0.9em;
+    color: #666;
 }
 
 .download-btn {
-  background-color: #007BFF;
-  color: #fff;
-  padding: 15px 30px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 18px;
-  transition: background-color 0.3s ease;
+    display: inline-block;
+    margin: 15px 0;
+    padding: 10px 20px;
+    background-color: #222;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .download-btn:hover {
-  background-color: #0056b3;
+    background-color: #444;
 }
 
 footer {
-  margin-top: 40px;
-  padding: 20px;
-  background-color: #222;
-  width: 100%;
-  text-align: center;
-  font-size: 14px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
 }
