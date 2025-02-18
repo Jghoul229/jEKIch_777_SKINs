@@ -16,4 +16,3 @@ function playPreview() {
     video.currentTime = 0;
   }, 5000); // Останавливаем видео через 5 секунд
 }
-
