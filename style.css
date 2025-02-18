@@ -13,6 +13,12 @@ header {
     text-align: center;
 }
 
+header p {
+    max-width: 800px;
+    margin: 10px auto;
+    font-size: 1.1em;
+}
+
 main {
     padding: 20px;
 }
@@ -21,6 +27,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
 }
 
 .skin-item {
@@ -36,6 +43,16 @@ main {
     height: auto;
 }
 
+.skin-item a {
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
 footer {
     background-color: #222;
     color: #fff;
@@ -44,3 +61,4 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+}
